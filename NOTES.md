@@ -12,5 +12,8 @@ The integration strictly follows VNPay's secure transaction lifecycle:
 - **Checksum Logic Errors:** Different APIs (Pay vs. QueryDR vs. Refund) require different parameter ordering in the pipe-delimited (`|`) hash string.
     * **Solution:** I cross-referenced the VNPay 2.1.0 documentation to fix the hashing order, specifically correctly positioning `vnp_OrderInfo` which varies per API type.
 
-## 3. Future Enhancements
+## 3. Problems
+- **"Refund feature is limited"** This feature is still limited in the VNPAY sandbox.
+
+## 4. Future Enhancements
 In a production environment, I would transition from SQLite to another DB for better concurrency and integrate an **Asynchronous IPN (Instant Payment Notification)** worker to ensure order statuses are updated even if the Return URL is never reached by the user.

@@ -6,7 +6,7 @@ This project is a functional demonstration of integrating the VNPay Payment Gate
 - **Online Payment:** Generate secure payment URLs with HMAC-SHA512 digital signatures.
 - **Result Handling (Return URL):** Validate checksums from VNPay responses to update order status securely.
 - **Transaction Query (QueryDR):** Real-time API calls to verify the current status of any transaction.
-- **Refund Processing:** Send refund requests to the VNPay system for successful transactions.
+- **Refund Processing:** Send refund requests to the VNPay system for successful transactions. **But this feature is currently limited in the VNPAY sandbox**
 - **Transaction Management:** Persistent storage and display of transaction history using SQLite.
 
 ## 🛠 Tech Stack
